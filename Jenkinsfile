@@ -30,7 +30,7 @@ pipeline {
                 script {
                     sh """
                     #!/bin/bash
-                    ssh -T -o StrictHostKeyChecking=no -i ~/aws-terraform.pem ubuntu@ec2-3-73-78-110.eu-central-1.compute.amazonaws.com' << EOF
+                    ssh -T -o StrictHostKeyChecking=no -i ~/aws-terraform.pem ubuntu@ec2-3-73-78-110.eu-central-1.compute.amazonaws.com << EOF
                     docker run --rm -p 8888:80 inzein/htmlimage:latest
                     exit 0
                     << EOF
