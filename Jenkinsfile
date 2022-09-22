@@ -42,12 +42,12 @@ pipeline {
             steps{
                 //sh 'docker pull inzein/htmlimage:47'
                 sh 'docker run --rm -p 8888:80 inzein/htmlimage:latest'
+                }
             }
-        }
-    }
-}      
+        }   
 post {
         always {
             sh 'docker logout'
         }
     }
+}
