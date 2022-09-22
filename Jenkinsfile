@@ -26,7 +26,7 @@ pipeline {
             }
         }
         stage('Connect to deploy') {
-            steps{
+            steps {
                 script {
                     sh """
                     #!/bin/bash
