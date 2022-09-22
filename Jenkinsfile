@@ -35,17 +35,17 @@ pipeline {
                     exit 0
                     << EOF
                     """
-                  }
+                    }
                 }    
             }
-        }
         stage("Run on Deploy server") {
             steps{
                 //sh 'docker pull inzein/htmlimage:47'
                 sh 'docker run --rm -p 8888:80 inzein/htmlimage:latest'
             }
         }
-  }      
+    }
+}      
 post {
         always {
             sh 'docker logout'
